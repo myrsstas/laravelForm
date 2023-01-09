@@ -54,13 +54,13 @@ class ContactsController extends Controller
 
         $contactToStore = new Contacts();
         $contactToStore->name = $name;
-        $contactToStore->surname = $surname;
-        $contactToStore->date_of_birth = $date_of_birth;
+        $contactToStore->surname = $surname ? : " - " ;
+        $contactToStore->date_of_birth = $date_of_birth ? : "0000-00-00" ;
         $contactToStore->phone_number = $phone_number;
         $contactToStore->email = $email;
-        $contactToStore->address = $address;
-        $contactToStore->city = $city;
-        $contactToStore->notes = $notes;
+        $contactToStore->address = $address ? : " - " ;
+        $contactToStore->city = $city ? : " - " ;
+        $contactToStore->notes = $notes ? : " - " ;
 
         $contactToStore->save();
 
