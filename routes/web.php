@@ -18,7 +18,7 @@ use \App\Http\Controllers\IndexController;
 
 // CRUD -> Create, Read, Update, Delete
 // HTTP Model -> Post, Get, Put, Delete
-// Post -> Mutate the backend data (primary, create a new record)
+// Post -> Mutate the backend data (primary, create a new record , change DataBase )
 // Get -> Read the backend data (by id or search model)
 // Put/Update -> Mutate the backend data (primary, update existing record)
 // Delete -> Mutate the backend data (primary, remove existing record)
@@ -29,3 +29,4 @@ Route::post('/startFromZero', [ContactsController::class, 'startFromZero']);
 Route::get('/contacts', [ContactsController::class, 'contacts']);
 Route::get('/contacts/add', [ContactsController::class, 'addContact']);
 Route::post('/contacts/add', [ContactsController::class, 'storeContact']);
+Route::get('/contacts/export', [ContactsController::class, 'exportData']);

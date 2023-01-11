@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name');
-            $table->string('surname') -> default(' - ');
-            $table->date('date_of_birth') -> default('0000-00-00');
+            $table->string('surname');
+            $table->date('date_of_birth');
             $table->unsignedInteger('phone_number') ->unique();
             $table->string('email') ->unique();
-            $table->string('address') -> default(' - ') ;
-            $table->string('city') -> default(' - ') ;
-            $table->text('notes') -> default(' - ') ;
+            $table->string('address') ;
+            $table->string('city') ;
+            $table->text('notes')  ;
         });
     }
 

@@ -24,4 +24,27 @@ class Contacts extends Model
     use HasFactory;
     public $timestamps = false;
 
+    public function __toString()
+    {
+        $fields = [
+            $this->id ,
+            $this->name,
+            $this->surname,
+            $this->date_of_birth,
+            $this->phone_number,
+            $this->email,
+            $this->address,
+            $this->city,
+            $this->notes
+        ];
+
+        $content= "";
+
+        foreach($fields as $field){
+            $content .= $field . ';' ;
+
+        }
+
+        return $content ;
+    }
 }

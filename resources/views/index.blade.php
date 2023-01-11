@@ -41,10 +41,10 @@
     </div>
     <hr />
     <div class ="previousListUpload">
-        <form method="post" action="/upload">
+        <form method="post" action="/upload" enctype="multipart/form-data">
             @csrf
              <h4>If you used this site before, and have a file, please upload it.</h4>
-             <input type="file" id="previousContactsFile" accept=".txt"/>
+             <input type="file" id="previousContactsFile" name="previousContactsFile" accept=".txt"/>
              <button class='button' type="submit">Upload File</button>
          </form>
     </div>
