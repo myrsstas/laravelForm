@@ -26,16 +26,27 @@
         }
 
         table {
+            margin-top: 20px;
             width: 100%;
-            word-break: break-all;
             border-spacing: 8px;
             border-collapse: collapse;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .id {
+            width: 4%;
         }
 
         th, td {
             border: 1px solid black;
             padding: 5px;
+            width: 20%;
         }
+
 
 
     </style>
@@ -56,7 +67,7 @@
 <div id="list-of-contacts">
     <table>
         <tr>
-            <th>ID</th>
+            <th class="id">ID</th>
             <th>Name</th>
             <th>Surname</th>
             <th>Date Of Birth</th>
@@ -64,7 +75,7 @@
             <th>Email</th>
             <th>Address</th>
             <th>City</th>
-            <th>Notes</th>
+            <th class="notes">Notes</th>
         </tr>
 
         @foreach ($contacts as $contact)
