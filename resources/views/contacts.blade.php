@@ -28,6 +28,7 @@
         table {
             margin-top: 20px;
             width: 100%;
+            table-layout: fixed;
             border-spacing: 8px;
             border-collapse: collapse;
         }
@@ -38,13 +39,13 @@
         }
 
         .id {
-            width: 4%;
+            background-color: #800020;
+            width: 3%;
         }
 
         th, td {
             border: 1px solid black;
             padding: 5px;
-            width: 20%;
         }
 
 
