@@ -52,7 +52,7 @@ class ContactsController extends Controller
         } catch (FileNotFoundException $e) {
         }
 
-        // TODO: redirect browser to "/contacts"
+        // redirect browser to "/contacts"
         return $this->redirectToContacts();
     }
 
