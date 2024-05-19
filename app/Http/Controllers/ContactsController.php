@@ -1,5 +1,5 @@
 <?php
-
+//Application development in popular integrated development environments. © 2023 by Myrsini Stasinou is licensed under CC BY-SA 4.0
 namespace App\Http\Controllers;
 
 use App\Models\Contacts;
@@ -35,13 +35,13 @@ class ContactsController extends Controller
 
     public function upload(Request $request): RedirectResponse
     {
-        // TODO: clear all records from database,
+        //clear all records from database,
         $this->clearAllRecords();
 
-        // TODO: Handle uploaded file,
+        //Handle uploaded file,
         try {
             $content = $request->file('previousContactsFile')->get();
-            // TODO: save all records from file to database
+            //save all records from file to database
             $records_original = explode("\n", $content);
             $records = array_slice($records_original, 0, sizeof($records_original) - 1);
 
@@ -52,7 +52,7 @@ class ContactsController extends Controller
         } catch (FileNotFoundException $e) {
         }
 
-        // TODO: redirect browser to "/contacts"
+        // redirect browser to "/contacts"
         return $this->redirectToContacts();
     }
 
@@ -75,15 +75,15 @@ class ContactsController extends Controller
 
     public function startFromZero(): RedirectResponse
     {
-        // TODO: Clear all records from data
+        //Clear all records from data
         $this->clearAllRecords();
-        // TODO: and redirect browser to "/contacts"
+        //and redirect browser to "/contacts"
         return $this->redirectToContacts();
     }
 
     public function contacts(): View
     {
-        // TODO: Get all contacts from database and pass them to the view
+        //Get all contacts from database and pass them to the view
         $allContacts = Contacts::all()->all();
         return view('contacts')->with('contacts', $allContacts);
     }
@@ -125,13 +125,13 @@ class ContactsController extends Controller
 
     private function clearAllRecords()
     {
-        // TODO: Clear all records
+        //Clear all records
         Contacts::truncate();
     }
 
     private function redirectToContacts(): RedirectResponse
     {
-        // TODO: and redirect browser to "/contacts"
+        //and redirect browser to "/contacts"
         return redirect('/contacts');
     }
 }
