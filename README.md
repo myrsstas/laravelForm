@@ -40,7 +40,7 @@ PHP
 
 Laravel Framework
 
-MySQL ()
+MySQL
 
 Blade Templating Engine
 
